@@ -1,2 +1,0 @@
-# LearnStyledComponent
-Created with CodeSandbox
