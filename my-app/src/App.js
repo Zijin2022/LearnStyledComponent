@@ -1,37 +1,32 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+// import { ThemeProvider } from "styled-components";
+import Navbar from "./components/navbar/navbar";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+    * {
+      font-family: 'Roboto', sans-serif; 
+    } */
+
+const GlobalStyles = createGlobalStyle`
+  body{
+    background-color: white;
+    
+  }
+`;
 
 const Container = styled.div`
-  background-color: black;
-  color: white;
+  background-color: white;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
-const BoxOne = styled.div`
-  background-color: red;
-  height: 200px;
-  flex: 1;
-`;
-
-const BoxTwo = styled.div`
-  background-color: green;
-  height: 200px;
-  flex: 1;
-`;
-
-const BoxThree = styled.div`
-  background-color: blue;
-  height: 200px;
-  flex: 1;
 `;
 
 export default function App() {
   return (
-    <Container>
-      <BoxOne />
-      <BoxTwo />
-      <BoxThree />
-    </Container>
+    <>
+      <GlobalStyles />
+      <Container>
+        <Navbar></Navbar>
+      </Container>
+    </>
   );
 }
